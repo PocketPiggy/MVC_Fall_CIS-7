@@ -214,11 +214,7 @@ void prob3() {
             cout << "\n";
         }
     }
-
     cout << endl << endl;
-
-    cout << "REDO THIS ALL";
-
     cout << "3a. No, each result is different." << endl;
     cout << "3b. (1/6)^10" << endl;
     cout << "3c. #1) 6, #2) 3, #3) 2, #4) 2, #5) 5, #6) 2" << endl;
@@ -230,7 +226,4 @@ void prob3() {
     cout << "3i. rand() isn't truly random and seems more static once generated. "
          << "srand() has a seed which is tied to current time, allowing for dynamic"
          << " results each time" << endl;
-
-
-
 }
