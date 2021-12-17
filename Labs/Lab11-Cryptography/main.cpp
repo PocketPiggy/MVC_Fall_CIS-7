@@ -56,25 +56,6 @@ string encrypt(string text, int s) {
     return result; 
 }
 
-string encrypt2(string Source, int Key) {
-    string Crypted = Source;
-
-    for(int Current = 0; Current < Source.length(); Current++)
-        Crypted[Current] += Key;
-
-    return Crypted;
-}
-
-
-char caesar(char c) {
-    if( isalpha(c))
-    {
-        c = toupper(c); //use upper to keep from having to use two seperate for A..Z a..z
-        c = (((c-65)+13) % 26) + 65;
-    }
-    //if c isn't alpha, just send it back.
-    return c;
-}
 
 void prob1() {
     string text2 = "Hello!";
@@ -138,14 +119,11 @@ void prob2() {
          << " example uses different way, rather than using inbuilt and seperate function"
          << " to encrypt. The first is cleaner and more modular as well.";
     cout << endl << endl;
-
-
 };
 
 void prob3() {
     char message[100], ch;
     int i, key;
-
     //cin.clear();
     cin.ignore();
     cout << "Enter a message to decrypt: ";
@@ -207,6 +185,25 @@ void prob4() {
          << " to the 3rd example. It's modular like the 1st (with use of seperate functions)," 
          << " and it's readability is higher. Overall, 4th is best, 3rd is worst." << endl;
 };
+
+string encrypt2(string Source, int Key) {
+    string Crypted = Source;
+
+    for(int Current = 0; Current < Source.length(); Current++)
+        Crypted[Current] += Key;
+
+    return Crypted;
+}
+
+char caesar(char c) {
+    if( isalpha(c))
+    {
+        c = toupper(c); //use upper to keep from having to use two seperate for A..Z a..z
+        c = (((c-65)+13) % 26) + 65;
+    }
+    //if c isn't alpha, just send it back.
+    return c;
+}
 
 void prob5() {
     string input;
